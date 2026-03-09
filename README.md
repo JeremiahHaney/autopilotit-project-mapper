@@ -10,6 +10,10 @@ The goal is to make it easier to:
 - audit systems
 - provide full project context to AI assistants
 
+## Configuration
+
+Copy the example configuration file and update it for your environment.
+
 ## Output
 
 The tool generates artifacts such as:
