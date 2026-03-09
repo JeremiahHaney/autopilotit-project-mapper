@@ -1,0 +1,121 @@
+{
+  "SolutionRoot": "PATH_TO_YOUR_SOLUTION",
+  "OutputDir": "OUTPUT_DIRECTORY",
+
+  "AllowedExtensions": [
+    ".cs",
+    ".cshtml",
+    ".xaml",
+    ".json",
+    ".config",
+    ".csproj",
+    ".sln",
+    ".props",
+    ".targets",
+    ".runtimeconfig.json",
+    ".deps.json",
+    ".pubxml",
+    ".xml",
+    ".sql",
+    ".ps1",
+    ".cmd",
+    ".bat",
+    ".md",
+    ".js",
+    ".ts",
+    ".tsx",
+    ".jsx",
+    ".css",
+    ".scss",
+    ".yml",
+    ".yaml",
+    ".editorconfig",
+    ".gitignore"
+  ],
+
+  "ConfigNames": [
+    "*.json"
+  ],
+
+  "RedactJsonKeys": [
+    "ApiKey",
+    "SecretKey",
+    "WebhookSecret",
+    "Password",
+    "PublishableKey",
+    "ConnectionString",
+    "ClientSecret",
+    "SigningKey"
+  ],
+
+  "SemanticKeywords": [
+    "DbContext",
+    "OnModelCreating",
+    "AddDbContext",
+    "Map",
+    "Contract",
+    "DeviceHealthSnapshot",
+    "SecurityScanResult"
+  ],
+
+  "ServerGeneratedColumns": [
+    "SecurityStatuses.ScanTimestampUtc",
+    "WindowsUpdates.ScanTimestampUtc"
+  ],
+
+  "ContractDiff": {
+    "Header": "=== CONTRACT DIFF ===",
+
+    "ContractTables": [
+      "DiskDrives",
+      "InstalledApplications",
+      "InstalledHotfixes",
+      "SecurityStatuses",
+      "WindowsServices",
+      "WindowsUpdates",
+      "StoreAppUpdates",
+      "MemoryModules",
+      "SystemMetadata"
+    ],
+
+    "DerivedTables": [
+      "DeviceHealthSnapshots"
+    ],
+
+    "IgnoreDbColumns": [
+      "Id",
+      "DeviceId",
+      "AppUserId",
+      "GeneratedUtc",
+      "ResolvedUtc",
+      "RegisteredAt",
+      "LastHeartbeat",
+      "InsightsGenerated"
+    ],
+
+    "IgnoreTables": [
+      "__EFMigrationsHistory"
+    ],
+
+    "NameMap": {},
+
+    "TableToPayloadRoot": {
+      "SecurityStatuses": "SecurityStatus",
+      "WindowsUpdates": "WindowsUpdateInfo",
+      "InstalledHotfixes": "HotfixInfo",
+      "InstalledApplications": "ApplicationInfo",
+      "DiskDrives": "DiskInfo",
+      "WindowsServices": "ServiceInfo",
+      "StoreAppUpdates": "StoreAppUpdateInfo",
+      "MemoryModules": "MemoryModuleInfo",
+      "SystemMetadata": "SystemMetadataEntry"
+    }
+  },
+
+  "IncludedProjects": [
+    {
+      "Name": "ExampleProject",
+      "RootPath": "PATH_TO_PROJECT_DIRECTORY"
+    }
+  ]
+}
